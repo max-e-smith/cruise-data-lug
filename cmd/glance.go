@@ -1,6 +1,5 @@
 /*
 Copyright © 2025 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
@@ -13,13 +12,9 @@ import (
 // glanceCmd represents the glance command
 var glanceCmd = &cobra.Command{
 	Use:   "glance",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "clug glance (<survey-name> | <path>) --(wcd | bathy | trackline)",
+	Long: `Summarizes survey information including file count and files' size 
+	for an equivalent get command`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("glance called")
 	},

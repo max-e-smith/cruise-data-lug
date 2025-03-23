@@ -6,9 +6,13 @@ CLI tool that downloads water column, trackline, or bathy data from the NOAA hos
 
 ## usage
 
-(wcd | bathy | trackline) ? 
+clug 
+(wcd | bathy | trackline)
+(survey <> | path <> | all)
 
-survey glance <> <> 
-survey list <> <>
-survey get <> <>
-survey config <> <>
+glance
+list
+get
+config 
+(bucket)
+

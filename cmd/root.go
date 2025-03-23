@@ -1,7 +1,3 @@
-/*
-Copyright © 2025 NAME HERE <EMAIL ADDRESS>
-
-*/
 package cmd
 
 import (
@@ -10,18 +6,23 @@ import (
 	"github.com/spf13/cobra"
 )
 
-
-
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "cruise-data-lug",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
+	Use:   "clug",
+	Short: "A simple retrieval tool for ocean datasets hosted by the NODD",
+	Long: `A CLI library for downloading ocean (bathymetry, trackline, and water column)
+	data from the NOAA Open Data Dissemination (NODD) cloud on a survey by survey basis.
+	This simplifies s3 object retrieval, which will almost always need to be downloaded 
+	in batch groups, avoiding downloading each file object manually. 
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	get, given a survey name argument or path, will download all survey files or 
+	sub-survey files at a given path.
+
+	glance will summarize all files and file sizes for an equivalent get command
+
+	list will display all files that will be downloaded for an equivalent get command
+
+	config can be used to change default bucket name and download parameters.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
@@ -47,5 +48,3 @@ func init() {
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
-
-
